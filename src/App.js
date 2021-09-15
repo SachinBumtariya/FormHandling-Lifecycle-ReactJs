@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 // import { PureComponent } from "react";
 import "./App.css";
-import ErrorBoundary from "./Components/ErrorBoundary";
+import ClickCounter from "./Components/ClickCounter";
+import ClickCounterTwo from "./Components/ClickCounterTwo";
+import Counter from "./Components/Counter";
+import HoverCounter from "./Components/HoverCounter";
+import HoverCounterTwo from "./Components/HoverCounterTwo";
+// import ErrorBoundary from "./Components/ErrorBoundary";
 // import FocusInput from "./Components/FocusInput";
-import FRParentInput from "./Components/FRParentInput";
-import Hero from "./Components/Hero";
+// import FRParentInput from "./Components/FRParentInput";
+// import Hero from "./Components/Hero";
 // import Form from "./Components/Form";
 // import FragmentDemo from "./Components/FragmentDemo";
 // import LifeCycleA from "./Components/LifeCycleA";
@@ -24,11 +29,26 @@ class App extends Component {
         <ParentComp /> */}
         {/* <RefsDemo/> */}
         {/* <FocusInput /> */}
-        <FRParentInput />
-        <ErrorBoundary>
-          <Hero heroName="Batman" />
+        {/* <FRParentInput />
+        <ErrorBoundary> */}
+        {/* <Hero heroName="Batman" />
           <Hero heroName="Joker" />
-        </ErrorBoundary>
+        </ErrorBoundary> */}
+        <ClickCounter />
+        <HoverCounter />
+        {/* <ClickCounterTwo />
+        <HoverCounterTwo />
+        <User render={(isLoggedIn) => (isLoggedIn ? "Sachin" : "Guest")} /> */}
+        <Counter
+          render={(count, incrementCount) => (
+            <ClickCounterTwo count={count} incrementCount={incrementCount} />
+          )}
+        />
+        <Counter
+          render={(count, incrementCount) => (
+            <HoverCounterTwo count={count} incrementCount={incrementCount} />
+          )}
+        />
       </div>
     );
   }
