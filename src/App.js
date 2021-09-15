@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 // import { PureComponent } from "react";
 import "./App.css";
+import ErrorBoundary from "./Components/ErrorBoundary";
 // import FocusInput from "./Components/FocusInput";
 import FRParentInput from "./Components/FRParentInput";
+import Hero from "./Components/Hero";
 // import Form from "./Components/Form";
 // import FragmentDemo from "./Components/FragmentDemo";
 // import LifeCycleA from "./Components/LifeCycleA";
@@ -22,7 +24,11 @@ class App extends Component {
         <ParentComp /> */}
         {/* <RefsDemo/> */}
         {/* <FocusInput /> */}
-        <FRParentInput/>
+        <FRParentInput />
+        <ErrorBoundary>
+          <Hero heroName="Batman" />
+          <Hero heroName="Joker" />
+        </ErrorBoundary>
       </div>
     );
   }
